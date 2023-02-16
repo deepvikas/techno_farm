@@ -43,6 +43,8 @@ sqlite3 db is used in this project as its a relational db.
 * Install DjangoREST Framework.
 * Clone this repo into your system.
 * Go to techno_farm folder.
+* Run command python3 manage.py makemigrations
+* Run command python3 manage.py migrate
 * Run commnad python3 manage.py runserver. (It will start the application)
 * Now you can use the application's api by urls in your local or any server. Ex for local: http://127.0.0.1/signup (This end point required username and password key in the body of payload).
 * You can use the Post collection attached with the application.
