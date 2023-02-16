@@ -1,7 +1,9 @@
 from django.urls import path
 from django.contrib.auth import views as auth_views
 
-from .views import AddFarmView, AddCropView, UpdateCropsView, UpdateFarmView, AvailableCropsView, GetAllFarmsDetails, GetFarm, AddSeasonView, AllSeasonsView
+from .views import AddFarmView, AddCropView, UpdateCropsView
+from .views import UpdateFarmView, AvailableCropsView, GetAllFarmsDetails
+from .views import GetFarm, AddSeasonView, AllSeasonsView
 
 urlpatterns = [
     path('add/farm', AddFarmView.as_view(), name='add-farm-view'),

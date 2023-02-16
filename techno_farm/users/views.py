@@ -1,18 +1,15 @@
+import logging
+_logger = logging.getLogger(__name__)
+
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from django.contrib.auth import authenticate
 import jwt, datetime
 from rest_framework.pagination import LimitOffsetPagination
-
-
 from django.shortcuts import render
-
 from .serializers import FarmUserSerializer
 from .models import FarmUser
-
-import logging
-_logger = logging.getLogger(__name__)
 
 
 class Authenticate():
@@ -75,17 +72,19 @@ class LoginView(APIView):
         password = request.POST['password']
         user = authenticate(username=username, password=password)
         user = FarmUser.objects.filter(username=username).first()
-        if not user :
-            return Response({'message': 'Incorrect Username !'}, status=status.HTTP_401_UNAUTHORIZED)
+        if not user:
+            return Response({'message': 'Incorrect Username !'},
+                            status=status.HTTP_401_UNAUTHORIZED)
         if not user.password == password:
-            return Response({'message': 'Incorrect password !'}, status=status.HTTP_401_UNAUTHORIZED)
+            return Response({'message': 'Incorrect password !'},
+            status=status.HTTP_401_UNAUTHORIZED)
 
         payload = {
             'id': user.id,
             'exp': datetime.datetime.utcnow() + datetime.timedelta(minutes=60),
             'iat': datetime.datetime.utcnow()
         }
-        token = jwt.encode(payload, 'secret', algorithm='HS256')
+        token = jwt.encode(payload, 'secret', algorithm='HS256').decode("utf-8")
         response = Response()
 
         response.set_cookie(key='jwt', value=token, httponly=True)
@@ -210,7 +209,8 @@ class SearchFarmerView(APIView):
             found = True
             farmer = farmer.all()
         if not found:
-            return Response({'message': 'Not Matched Found'}, status=status.HTTP_204_NO_CONTENT)
+            return Response({'message': 'Not Matched Found'},
+                            status=status.HTTP_204_NO_CONTENT)
         paginator = LimitOffsetPagination()
         result_page = paginator.paginate_queryset(farmer, request)
         serializer = FarmUserSerializer(result_page, many=True, context={'request':request})
@@ -252,8 +252,7 @@ class DeleteFarmerView(APIView):
                 else:
                     data['False']=False
                     data['message'] = "Can't delete admin"
-                    code = status.HTTP_409_CONFLICT
-    
+                    code = status.HTTP_409_CONFLICT    
             else:
                 data['False']=False
                 data['message'] = 'Invalid farmer_id'
@@ -263,6 +262,3 @@ class DeleteFarmerView(APIView):
             data['message'] = 'Missing farmer_id'
             code = status.HTTP_400_BAD_REQUEST
         return Response(data, status=code)
-
-
-

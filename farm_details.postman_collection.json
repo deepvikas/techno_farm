@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "6a6a0f71-3a99-4831-8af7-572cb7ab92b6",
+		"_postman_id": "bb8ea425-4eb7-40d4-a123-796b77566b38",
 		"name": "farm_details",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -64,8 +64,7 @@
 						{
 							"key": "email",
 							"value": "test@test.com",
-							"type": "default",
-							"disabled": true
+							"type": "default"
 						},
 						{
 							"key": "address_line",
@@ -85,44 +84,7 @@
 						{
 							"key": "mobile",
 							"value": "90129012",
-							"type": "default",
-							"disabled": true
-						},
-						{
-							"key": "season_id",
-							"value": "1",
-							"type": "default",
-							"disabled": true
-						},
-						{
-							"key": "farmer_id",
-							"value": "3",
-							"type": "default",
-							"disabled": true
-						},
-						{
-							"key": "crop_id",
-							"value": "1",
-							"type": "default",
-							"disabled": true
-						},
-						{
-							"key": "end_time",
-							"value": "2018-04-02 05:05:22",
-							"type": "default",
-							"disabled": true
-						},
-						{
-							"key": "name",
-							"value": "wheatfarm",
-							"type": "default",
-							"disabled": true
-						},
-						{
-							"key": "variety",
-							"value": "new",
-							"type": "default",
-							"disabled": true
+							"type": "default"
 						}
 					]
 				},
@@ -138,18 +100,6 @@
 					"port": "8000",
 					"path": [
 						"signup"
-					],
-					"query": [
-						{
-							"key": "username",
-							"value": "farmer1",
-							"disabled": true
-						},
-						{
-							"key": "password",
-							"value": "test",
-							"disabled": true
-						}
 					]
 				}
 			},
@@ -285,78 +235,6 @@
 					"mode": "formdata",
 					"formdata": [
 						{
-							"key": "username",
-							"value": "farmer_1",
-							"type": "default",
-							"disabled": true
-						},
-						{
-							"key": "password",
-							"value": "test",
-							"type": "default",
-							"disabled": true
-						},
-						{
-							"key": "user_type",
-							"value": "farmer",
-							"type": "default",
-							"disabled": true
-						},
-						{
-							"key": "first_name",
-							"value": "test_first",
-							"type": "default",
-							"disabled": true
-						},
-						{
-							"key": "last_name",
-							"value": "test_last",
-							"type": "default",
-							"disabled": true
-						},
-						{
-							"key": "email",
-							"value": "farmer@test.com",
-							"type": "default",
-							"disabled": true
-						},
-						{
-							"key": "address_line",
-							"value": "street 1",
-							"type": "default",
-							"disabled": true
-						},
-						{
-							"key": "city",
-							"value": "delhi",
-							"type": "default",
-							"disabled": true
-						},
-						{
-							"key": "zip_code",
-							"value": "201201",
-							"type": "default",
-							"disabled": true
-						},
-						{
-							"key": "mobile",
-							"value": "90129012",
-							"type": "default",
-							"disabled": true
-						},
-						{
-							"key": "latitude",
-							"value": "10.12",
-							"type": "default",
-							"disabled": true
-						},
-						{
-							"key": "longitude",
-							"value": "15.12",
-							"type": "default",
-							"disabled": true
-						},
-						{
 							"key": "name",
 							"value": "forteen_farm",
 							"type": "default"
@@ -375,24 +253,6 @@
 							"key": "zip_code",
 							"value": "209102",
 							"type": "default"
-						},
-						{
-							"key": "crop_id",
-							"value": "1",
-							"type": "default",
-							"disabled": true
-						},
-						{
-							"key": "farmer_id",
-							"value": "2",
-							"type": "default",
-							"disabled": true
-						},
-						{
-							"key": "season_id",
-							"value": "1",
-							"type": "default",
-							"disabled": true
 						},
 						{
 							"key": "latitude",
@@ -491,18 +351,6 @@
 					"mode": "formdata",
 					"formdata": [
 						{
-							"key": "username",
-							"value": "farmer_1",
-							"type": "default",
-							"disabled": true
-						},
-						{
-							"key": "password",
-							"value": "test",
-							"type": "default",
-							"disabled": true
-						},
-						{
 							"key": "season_id",
 							"value": "1",
 							"type": "default"
@@ -546,12 +394,6 @@
 							"key": "crop_id",
 							"value": "2",
 							"type": "default"
-						},
-						{
-							"key": "password",
-							"value": "test",
-							"type": "default",
-							"disabled": true
 						}
 					]
 				},
@@ -683,7 +525,7 @@
 					"formdata": [
 						{
 							"key": "username",
-							"value": "farmer_6",
+							"value": "farmer_10",
 							"type": "default"
 						},
 						{
@@ -794,20 +636,7 @@
 				"header": [],
 				"body": {
 					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "username",
-							"value": "test",
-							"type": "default",
-							"disabled": true
-						},
-						{
-							"key": "password",
-							"value": "test",
-							"type": "default",
-							"disabled": true
-						}
-					]
+					"formdata": []
 				},
 				"url": {
 					"raw": "http://127.0.0.1:8000/get/farmer?first_name=my_name&offset=0&limit=1",
@@ -848,23 +677,10 @@
 				"header": [],
 				"body": {
 					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "username",
-							"value": "test",
-							"type": "default",
-							"disabled": true
-						},
-						{
-							"key": "password",
-							"value": "test",
-							"type": "default",
-							"disabled": true
-						}
-					]
+					"formdata": []
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/delete/farmer/3",
+					"raw": "http://127.0.0.1:8000/delete/farmer/6",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -876,7 +692,7 @@
 					"path": [
 						"delete",
 						"farmer",
-						"3"
+						"6"
 					]
 				}
 			},

@@ -9,12 +9,10 @@ from users.models import FarmUser
 from .models import Farm, Crop, Season
 from .serialiers import FarmSerializer, CropSerializer, SeasonSerializer
 
-import logging, ast
+import logging
 _logger = logging.getLogger(__name__)
 
 # Create your views here.
-
-
 
 class AddFarmView(APIView):
     def post(self, request):
@@ -89,7 +87,7 @@ class UpdateCropsView(APIView):
         payload = res.get('result')
         user = FarmUser.objects.get(id=payload['id'])
         data = dict()
-        if request.data.get('crop_id') and farm_id:   
+        if request.data.get('crop_id') and farm_id:
             try:
                 farm = Farm.objects.filter(id=int(farm_id)).first()
                 if farm and farm.farmer_id.id == user.id:
@@ -113,12 +111,11 @@ class UpdateCropsView(APIView):
                     'status': False,
                     'message': e
                 }
-                _logger.error("%r"%e)
                 code = status.HTTP_400_BAD_REQUEST
         else:
             data['statu'] = False
             data['message'] = 'Invalid or Missing crop_id or farm_id'
-            code = status.HTTP_400_BAD_REQUEST            
+            code = status.HTTP_400_BAD_REQUEST
         return Response(data, status=code)
 
 class UpdateFarmView(APIView):
@@ -133,7 +130,6 @@ class UpdateFarmView(APIView):
         try:
             farm = Farm.objects.filter(id=int(farm_id)).first()
             if farm.farmer_id.id == user.id:
-                _logger.error("%r"%request.data)
                 farm_serializer = FarmSerializer(farm, data=request.data, partial=True)
                 farm_serializer.is_valid(raise_exception=True)
                 farm_serializer.save()
@@ -156,7 +152,6 @@ class UpdateFarmView(APIView):
                 'status': False,
                 'message': e
             }
-            _logger.error("%r"%e)
             code = status.HTTP_400_BAD_REQUEST
         return Response(data, status=code)
 
