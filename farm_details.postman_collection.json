@@ -1,0 +1,886 @@
+{
+	"info": {
+		"_postman_id": "6a6a0f71-3a99-4831-8af7-572cb7ab92b6",
+		"name": "farm_details",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8000/signup",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "login",
+						"value": "test",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "password",
+						"value": "test",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "test",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "test",
+							"type": "default"
+						},
+						{
+							"key": "lastname",
+							"value": "admin",
+							"type": "default"
+						},
+						{
+							"key": "first_name",
+							"value": "admin",
+							"type": "default"
+						},
+						{
+							"key": "latitude",
+							"value": "10.0",
+							"type": "default"
+						},
+						{
+							"key": "longitude",
+							"value": "10.0",
+							"type": "default"
+						},
+						{
+							"key": "user_type",
+							"value": "admin",
+							"type": "default"
+						},
+						{
+							"key": "email",
+							"value": "test@test.com",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "address_line",
+							"value": "street",
+							"type": "default"
+						},
+						{
+							"key": "city",
+							"value": "city_new",
+							"type": "default"
+						},
+						{
+							"key": "zip_code",
+							"value": "201201",
+							"type": "default"
+						},
+						{
+							"key": "mobile",
+							"value": "90129012",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "season_id",
+							"value": "1",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "farmer_id",
+							"value": "3",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "crop_id",
+							"value": "1",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "end_time",
+							"value": "2018-04-02 05:05:22",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "wheatfarm",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "variety",
+							"value": "new",
+							"type": "default",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/signup",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"signup"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "farmer1",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "test",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "test",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "test",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"login"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "test",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/add/season",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "spring",
+							"type": "default"
+						},
+						{
+							"key": "start_time",
+							"value": "2023-03-12 05:12:32",
+							"type": "default"
+						},
+						{
+							"key": "end_time",
+							"value": "2023-05-12 05:12:32",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/add/season",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"add",
+						"season"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/add/crop",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "wheat",
+							"type": "default"
+						},
+						{
+							"key": "variety",
+							"value": "new",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/add/crop",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"add",
+						"crop"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/add/farm",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "farmer_1",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "test",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "user_type",
+							"value": "farmer",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "first_name",
+							"value": "test_first",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "last_name",
+							"value": "test_last",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "farmer@test.com",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "address_line",
+							"value": "street 1",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "city",
+							"value": "delhi",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "zip_code",
+							"value": "201201",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "mobile",
+							"value": "90129012",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "latitude",
+							"value": "10.12",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "longitude",
+							"value": "15.12",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "forteen_farm",
+							"type": "default"
+						},
+						{
+							"key": "address_line",
+							"value": "street_2",
+							"type": "default"
+						},
+						{
+							"key": "city",
+							"value": "delhi",
+							"type": "default"
+						},
+						{
+							"key": "zip_code",
+							"value": "209102",
+							"type": "default"
+						},
+						{
+							"key": "crop_id",
+							"value": "1",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "farmer_id",
+							"value": "2",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "season_id",
+							"value": "1",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "latitude",
+							"value": "12.09",
+							"type": "default"
+						},
+						{
+							"key": "longitude",
+							"value": "12.98",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/add/farm",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"add",
+						"farm"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/my/all/farms?limit=2&offset=0",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/my/all/farms?limit=2&offset=0",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"my",
+						"all",
+						"farms"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "2"
+						},
+						{
+							"key": "offset",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/farm/detail/9",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/farm/detail/9",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"farm",
+						"detail",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/update/my/farm/9",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "farmer_1",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "test",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "season_id",
+							"value": "1",
+							"type": "default"
+						},
+						{
+							"key": "city",
+							"value": "mumbai",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/update/my/farm/9",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"update",
+						"my",
+						"farm",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/update/crop/9",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "crop_id",
+							"value": "2",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "test",
+							"type": "default",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/update/crop/9",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"update",
+						"crop",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/all/seasons?limit=2&offset=0",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/all/seasons?limit=2&offset=0",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"all",
+						"seasons"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "2"
+						},
+						{
+							"key": "offset",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/get/crops?limit=2&offset=0",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/get/crops?limit=2&offset=0",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"get",
+						"crops"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "2"
+						},
+						{
+							"key": "offset",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/update/profile",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "lastname",
+							"value": "singh",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/update/profile",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"update",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/new/farmer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "farmer_6",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "test",
+							"type": "default"
+						},
+						{
+							"key": "first_name",
+							"value": "my_new_name",
+							"type": "default"
+						},
+						{
+							"key": "last_name",
+							"value": "new_name_last",
+							"type": "default"
+						},
+						{
+							"key": "email",
+							"value": "my_name@test.com",
+							"type": "default"
+						},
+						{
+							"key": "user_type",
+							"value": "farmer",
+							"type": "default"
+						},
+						{
+							"key": "address_line",
+							"value": "street_2",
+							"type": "default"
+						},
+						{
+							"key": "city",
+							"value": "jaipur",
+							"type": "default"
+						},
+						{
+							"key": "mobile",
+							"value": "9012901290",
+							"type": "default"
+						},
+						{
+							"key": "latitude",
+							"value": "12.0",
+							"type": "default"
+						},
+						{
+							"key": "longitude",
+							"value": "19.0",
+							"type": "default"
+						},
+						{
+							"key": "zip_code",
+							"value": "901902",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/new/farmer",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"new",
+						"farmer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/my/profile",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/my/profile",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"my",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/get/farmer?first_name=my_name&offset=0&limit=1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "test",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "test",
+							"type": "default",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/get/farmer?first_name=my_name&offset=0&limit=1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"get",
+						"farmer"
+					],
+					"query": [
+						{
+							"key": "first_name",
+							"value": "my_name"
+						},
+						{
+							"key": "offset",
+							"value": "0"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/delete/farmer/4",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "test",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "test",
+							"type": "default",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/delete/farmer/3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"delete",
+						"farmer",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
